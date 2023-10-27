@@ -3,7 +3,7 @@
 
 const number1 = 10;
 const number2 = 20;
-const number3 = 2;
+const number3 = 1;
 
 // ejemplo
 if(number1 === 10){
