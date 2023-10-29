@@ -1,7 +1,7 @@
-# Español
-Dado el siguiente html usa querySelector para mostrar por consola el 3 personaje con el atributo data-function="testMe".
+<!-- # Español
+Dado el siguiente html usa querySelector para mostrar por consola todos los elementos con el atributo data-function="testMe".
+-->
 
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +14,14 @@ Dado el siguiente html usa querySelector para mostrar por consola el 3 personaje
     <span data-function="testMe">Robin</span>
     <span data-function="testMe">Rick</span>
     <span data-function="testMe">Morty</span>
+
+    <script>
+        let test = document.querySelectorAll('span[data-function="testMe"]')
+        test.forEach(i => {
+            console.log(i);
+        })
+    </script>
 </body>
 </html>
-```
+
+
