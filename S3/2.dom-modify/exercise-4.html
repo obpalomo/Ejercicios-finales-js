@@ -1,0 +1,49 @@
+<!-- Inserta dinamicamente con javascript en un html una p con el texto 'Soy dinámico!'. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .container {
+        display: flex;
+        height: 300px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      p {
+        font-size: 83px;
+        background-color: antiquewhite;
+        margin: 0;
+        border: 1px solid black;
+        font-family: monospace;
+        animation: mover 3s ease-in infinite;
+      }
+      @keyframes mover {
+        0% {
+          left: 0;
+        }
+        50% {
+          left: 200px;
+          background-color: #e74c3c;
+        }
+        100% {
+          left: 0;
+          background-color: aqua;
+        }
+      }
+    </style>
+    <div class="container"></div>
+    <script>
+      let container = document.querySelector(".container");
+      let newP = document.createElement("p");
+      newP.innerHTML = "Soy dinámico!";
+      container.appendChild(newP);
+    </script>
+  </body>
+</html>

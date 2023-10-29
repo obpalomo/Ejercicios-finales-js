@@ -1,0 +1,34 @@
+<!-- Basandote en el siguiente html,inserta una p con el texto 'Voy en medio!' entre los dos div.
+    Recuerda que no solo puedes insertar elementos con .appendChild. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      p {
+        color: palevioletred;
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 25px;
+      }
+    </style>
+    <div>Voy primero</div>
+    <div>Voy segundo</div>
+    <script>
+      /* Crear el elmento p */
+      let newP = document.createElement("p");
+      newP.innerHTML = "Voy en medio!";
+
+      /* Seleccionamos el segundo DIV */
+      let divSegundo = document.querySelectorAll("div")[1];
+
+      /* Inserta el nuevo párrafo antes del segundo div */
+      divSegundo.parentNode.insertBefore(newP, divSegundo);
+    </script>
+  </body>
+</html>

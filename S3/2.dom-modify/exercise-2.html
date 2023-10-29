@@ -1,0 +1,32 @@
+<!-- Inserta dinamicamente en un html un div que contenga una p con javascript. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .pstyle{
+            color:red;
+            background-color: cadetblue;
+            font-weight: bold;
+        }
+    </style>
+    <div class="container">
+
+    </div>
+
+    <script>
+        let container = document.querySelector('.container');
+        let newP = document.createElement('p');
+        newP.className = 'pstyle'
+        newP.innerHTML = 'Soy un nuevo parrafo';
+
+        container.appendChild(newP);
+    </script>
+
+</body>
+</html>

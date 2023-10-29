@@ -1,0 +1,40 @@
+<!-- Basandote en el siguiente array crea una lista ul > li con los textos del array y metelo en el html. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      ul {
+        list-style-type: none;
+        text-decoration: none;
+        padding: 0;
+      }
+      h2 {
+        margin: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-decoration: underline;
+      }
+      li {
+        color: blueviolet;
+      }
+    </style>
+    <h2>Lista de plataformas</h2>
+    <ul class="lista"></ul>
+    <script>
+      var apps = ["Facebook", "Netflix", "Instagram", "Snapchat", "Twitter"];
+
+      let listApps = document.querySelector(".lista");
+
+      apps.forEach((app) => {
+        let li = document.createElement("li");
+        li.innerHTML = app;
+        listApps.appendChild(li);
+      });
+    </script>
+  </body>
+</html>
