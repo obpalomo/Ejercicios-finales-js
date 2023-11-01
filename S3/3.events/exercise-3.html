@@ -1,0 +1,32 @@
+<!-- Basandote en el siguiente html, añade un evento 'input' que ejecute un console.log con el valor del input.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <label for="username">Name:</label><br>
+  <input type="text" id="username" name="username"><br>
+  <label for="lname">Last Name:</label><br>
+  <input type="text" id="lname" name="lname"><br>
+  <input type="submit" value="Submit">
+
+  <script>
+    const userNameInput = document.querySelector('#username');
+    const lnameInput = document.querySelector('#lname');
+
+    userNameInput.addEventListener('input', function () {
+      console.log('Name: ', userNameInput.value);
+    });
+    lnameInput.addEventListener('input', function () {
+      console.log('Last Name: ', lnameInput.value);
+    });
+
+
+  </script>
+</body>
+</html>
