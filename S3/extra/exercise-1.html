@@ -1,0 +1,59 @@
+<!-- Basandote en el array siguiente, crea una lista ul > li dinámicamente en el html que imprima cada uno de los paises.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      ul {
+        list-style-type: none;
+        text-decoration: none;
+        padding: 0;
+        text-align: center;
+        border-radius: 20%;
+        margin-top:0;
+      }
+      h2 {
+        color: forestgreen;
+        text-align: center;
+        margin: 5px;
+      }
+      li {
+        color: midnightblue;
+        font-weight: bolder;
+        background-color: antiquewhite;
+      }
+      ul li {
+        border: 1px solid black;
+        border-radius: 2cm;
+      }
+      li:hover{
+        background-color: aquamarine;
+      }
+    </style>
+    <h2>Lista de paises</h2>
+    <ul class="listCountries"></ul>
+
+    <script>
+      const countries = [
+        "Japón",
+        "Nicaragua",
+        "Suiza",
+        "Australia",
+        "Venezuela",
+      ];
+      let list = document.querySelector(".listCountries");
+
+      countries.forEach((country) => {
+        let li = document.createElement("li");
+        li.innerHTML = country;
+        list.appendChild(li);
+      });
+    </script>
+  </body>
+</html>

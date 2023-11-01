@@ -1,0 +1,29 @@
+<!-- Dado el siguiente html y javascript. 
+    Utiliza el array para crear dinamicamente una lista ul > li de elementos en el div de html con el atributo data-function="printHere".
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Lista de coches</h2>
+    <div data-function="printHere"></div>
+
+    <script>
+      const cars = ["Mazda 6", "Ford fiesta", "Audi A4", "Toyota corola"];
+
+      let listCars = document.querySelector('[data-function="printHere"]');
+      cars.forEach((car) => {
+        let ul = document.createElement('ul');
+        listCars.appendChild(ul);
+        let li = document.createElement('li');
+        li.innerHTML = car;
+        ul.appendChild(li);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!-- Dado el siguiente array de objetos. 
+Crea dinamicamente en el html una lista de div que contenga un elemento h4 para el titulo y otro elemento img para la imagen.  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const countries = [
+            {title: 'Random title 1', imgUrl: 'https://picsum.photos/300/200?random=1'},
+            {title: 'Random title 2', imgUrl: 'https://picsum.photos/300/200?random=2'},
+            {title: 'Random title 3', imgUrl: 'https://picsum.photos/300/200?random=3'},
+            {title: 'Random title 4', imgUrl: 'https://picsum.photos/300/200?random=4'},
+            {title: 'Random title 5', imgUrl: 'https://picsum.photos/300/200?random=5'}
+        ];
+
+    const body = document.querySelector('body');
+
+    countries.forEach((country) => {
+        let div = document.createElement('div');
+
+        let h4 = document.createElement('h4');
+        h4.innerHTML = country.title;
+
+        let img = document.createElement('img');
+        img.setAttribute('src', country.imgUrl);
+
+        div.append(h4);
+        div.append(img);
+
+        body.appendChild(div);
+    })
+    
+
+    </script>
+
+</body>
+</html>
+
+
