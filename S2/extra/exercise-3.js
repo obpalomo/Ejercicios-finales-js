@@ -35,7 +35,21 @@ const users = [
             firecamp: {format: 'mp3', volume: 60},
         }
     },
-]
+];
+
+const soundCounts = {};
+
+for (const user of users) {
+    const favorites = user.favoritesSounds;
+    for (const sound in favorites) {
+        if (soundCounts[sound]) {
+            soundCounts[sound]++;
+          } else {
+            soundCounts[sound] = 1;
+          }
+    }
+};
+console.log(soundCounts);
 
 
 
