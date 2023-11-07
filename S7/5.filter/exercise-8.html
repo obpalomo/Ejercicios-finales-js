@@ -20,7 +20,9 @@ En este caso, muestra solo los streamers filtrados cuando hagamos click en el bu
   </head>
   <body>
     <input type="text" data-function="toFilterStreamers" />
-    <button data-function="toShowFilterStreamers">Filter</button>
+    <button id="filterButton" data-function="toShowFilterStreamers">
+      Filter
+    </button>
 
     <script>
       const streamers = [
@@ -30,7 +32,19 @@ En este caso, muestra solo los streamers filtrados cuando hagamos click en el bu
         { name: "AuronPlay", age: 33, gameMorePlayed: "Among Us" },
       ];
 
-      const inptu$$ = document.querySelector('[data-function="toFilterStreamers"]');
+        const filterStreamers = (event) => {
+        const input$$ = event.target.previousElementSibling;
+        const filteredStreamers = streamers.filter((streamer) =>
+          streamer.name.toLowerCase().includes(input$$.value.toLowerCase())
+        );
+        console.log(filteredStreamers);
+      };
+
+      const button$$ = document.querySelector(
+        '[data-function="toShowFilterStreamers"]'
+      );
+
+      button$$.addEventListener("click", filterStreamers);
     </script>
   </body>
 </html>
