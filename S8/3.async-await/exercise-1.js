@@ -1,6 +1,7 @@
-Convierte la siguiente promesa para esperar a ejecutar el console usando async-await.
+/* Convierte la siguiente promesa para esperar 
+a ejecutar el console usando async-await. */
 
-```js
+
 const runTimeOut = () => {
     const promise = new Promise((resolve) => {
         setTimeout(function () {
@@ -12,4 +13,4 @@ const runTimeOut = () => {
 };
 
 runTimeOut();
-```
+
